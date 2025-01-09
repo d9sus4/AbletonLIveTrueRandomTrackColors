@@ -12,9 +12,9 @@ Though not backed up by science or anything, sometimes how your working environm
 
 ## Requirements
 
-Nothing. Just Ableton Live, Windows or macOS.
+Nothing. Just Ableton Live on Windows or macOS.
 
-Theoretically it should works in Live 10, 11 and 12.
+Theoretically it should work in all 3 recent versions of Live (10, 11 and 12).
 
 ## How to use
 
@@ -23,13 +23,21 @@ Theoretically it should works in Live 10, 11 and 12.
 3. Go to `Link, Tempo & MIDI` tab in preferences, add `TrueRandomTrackColors` to the Control Surface list. Leave both Input and Output as None.
 4. It should work now.
 
+## Customizable behaviors
+
+See `TrueRandomTrackColors/config.py`.
+
+Remember to always restart Live after modifications.
+
 ## Reference
 
-- [AbletonAutoColor](https://github.com/CoryWBoris/AbletonAutoColor/tree/main): many thanks to this similar project that does auto color massignment. Code structure is basically borrowed from it.
+- [AbletonAutoColor](https://github.com/CoryWBoris/AbletonAutoColor/tree/main): many thanks to this similar project that does auto color assignment. Code structure is basically borrowed from it.
 - [Live 12 Remote Scripts](https://github.com/gluon/AbletonLive12_MIDIRemoteScripts): decompiled factory scripts.
 - [Live 11 API](https://structure-void.com/PythonLiveAPI_documentation/Live11.0.xml): Reverse-engineered unofficial Python API. Live 12 didn't change much.
 - [This reddit post](https://www.reddit.com/r/ableton/comments/vtc8s7/writing_my_own_control_surface_script/) helped in debugging.
 
 ## TODO
 
-- If `Theme-Colors->Auto-Assign Track Colors` is not checked, disable the plugin
+- If `Theme-Colors->Auto-Assign Track Colors` is not checked, disable the plugin.
+- Allow user customized palette.
+- Allow diffferent sets of colors based on matching track names; or disable random color in certain group tracks if name matches.
