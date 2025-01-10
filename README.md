@@ -18,14 +18,14 @@ Theoretically it should work in all 3 recent versions of Live (10, 11 and 12).
 
 ## How to use
 
-1. Copy `TrueRandomTrackColors` folder into the `Remote Scripts` directory under your Ableton Live User Library (if no such directory, create it)
+1. Copy `BetterTrackColors` folder into the `Remote Scripts` directory under your Ableton Live User Library (if no such directory, create it)
 2. Restart Live.
-3. Go to `Link, Tempo & MIDI` tab in preferences, add `TrueRandomTrackColors` to the Control Surface list. Leave both Input and Output as None.
+3. Go to `Link, Tempo & MIDI` tab in preferences, add `BetterTrackColors` to the Control Surface list. Leave both Input and Output as None.
 4. It should work now.
 
 ## Customizable behaviors
 
-See `TrueRandomTrackColors/config.py`.
+See `BetterTrackColors/config.py`.
 
 Remember to always restart Live after modifications.
 
