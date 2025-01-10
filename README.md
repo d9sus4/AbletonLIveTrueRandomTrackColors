@@ -1,24 +1,14 @@
-# Ableton Live QoL Control Surface
+# Ableton Live Better Track Colors
 
-An experimental Ableton Live control surface script that does a bunch of quality of life automations in controlling the daw.
+An experimental Ableton Live control surface script that assigns true random colors to any new tracks (including return tracks, nested tracks) created + some other cool abilities.
 
 ## Why
 
-This project started out as a true random track color assignment plugin `TrueRandomTrackColors`.
-
 Starting from Live 10, new track colors are not truly random, even if `Theme-Colors->Auto-Assign Track Colors` is enabled in preferences. Instead, new colors are always picked from a fixed color sequence in cycling order. It never uses all 70 colors in Ableton's color palette.
 
-Also, I don't like how Ableton always match new track color to the parent in a grouped track.
+Also, I don't like how Ableton always matches new track color to the container in a grouped track.
 
-Though not backed up by science or anything, I personally believe how your working environment looks and feels can somehow impact your creativity, so you may want true random new track colors.
-
-Later on, I added a bunch of other quality of life improvements to it, hence renamed to `QoLControls`.
-
-## Capabilities
-
-- Assign true random colors to any new tracks (including return tracks, nested tracks) created, and:
-  - Exclude certain grouped tracks based on group name matching
-  - 
+Though not backed up by science or anything, I personally believe how the working environment looks and feels can always impact one's creativity, so you may want true random new track colors.
 
 ## Requirements
 
@@ -48,6 +38,8 @@ Remember to always restart Live after modifications.
 
 ## TODO
 
-- If `Theme-Colors->Auto-Assign Track Colors` is not checked, disable the plugin.
-- Allow user customized palette.
-- Allow diffferent sets of colors based on matching track names; or disable random color in certain group tracks if name matches.
+- ~~If `Theme-Colors->Auto-Assign Track Colors` is not checked, disable the plugin.~~ Looks impossible for now.
+- Allow user customized palette. ✅
+- Skip copied tracks. ✅
+- Skip certain group tracks if name matches certain rules. ✅
+- Allow diffferent sets of color palettes based on matching track names.
