@@ -4,11 +4,9 @@ import random
 from functools import partial
 from .config import *
 
-color_indices = range(70)
-
 def assign_random_track_color(track):
     """Assigns a random color to a track"""
-    track.color_index = random.choice(color_indices)
+    track.color_index = random.choice(COLOR_INDICES)
 
 def get_all_tracks(doc):
     all_tracks = []
@@ -27,19 +25,18 @@ def get_nested_tracks(group_track):
                 nested_tracks.extend(get_nested_tracks(track))
     return nested_tracks
 
-class TrueRandomTrackColors(ControlSurface):
+class QoLControls(ControlSurface):
     def __init__(self, c_instance):
         ControlSurface.__init__(self, c_instance)
         app = Live.Application.get_application()
         self.doc = app.get_document()
-        self.previous_track_ids = set(track._live_ptr for track in get_all_tracks(self.doc))
-        self.previous_return_track_ids = set(track._live_ptr for track in self.doc.return_tracks)
-        # assign random colors to existing tracks on initialization
-        # self.assign_colors_to_existing_tracks()
-
-        # register the listener functions
-        self.doc.add_tracks_listener(self.on_tracks_changed)
-        self.doc.add_return_tracks_listener(self.on_return_tracks_changed)
+        if RANDOMIZE_NEW_TRACK_COLORS:
+            self.previous_track_ids = set(track._live_ptr for track in get_all_tracks(self.doc))
+            self.doc.add_tracks_listener(self.on_tracks_changed)
+        if RANDOMIZE_NEW_RETURN_TRACK_COLORS:
+            self.previous_return_track_ids = set(track._live_ptr for track in self.doc.return_tracks)
+            self.doc.add_return_tracks_listener(self.on_return_tracks_changed)
+            
 
         # for track in get_all_tracks(self.doc):
         #     track.add_name_listener(partial(self.on_track_name_changed, track))
